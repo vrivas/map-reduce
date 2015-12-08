@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="map-reduce.js"></script>
+    </head>
+    <body>
+        <div id="inicial"><h1>Tortillas iniciales</h1></div>
+        <div id="doble"><h1>Doble</h1></div>
+        <div id="num_huevos"><h1>Num. huevos</h1></div>
+        <div id="solo_huevos"><h1>Solo huevos</h1></div>
+        <div id="con_sal"><h1>Con sal</h1></div>
+        <div id="con_cebolla"><h1>Con cebolla</h1></div>
+
+        <script>
+            document.getElementById("inicial").innerHTML += listar(tortillas);
+            duplicar(tortillas);
+            document.getElementById("doble").innerHTML += listar(tortillas);
+            document.getElementById("num_huevos").innerHTML += "Necesitamos " + sumar_huevos(tortillas) + " huevos";
+            document.getElementById("solo_huevos").innerHTML += solo_huevos(tortillas);
+            document.getElementById("con_sal").innerHTML += listar(con_sal(tortillas));
+            document.getElementById("con_cebolla").innerHTML += listar(con_cebolla(tortillas));
+
+        </script>
+    </body>
+</html>
