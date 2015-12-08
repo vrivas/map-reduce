@@ -9,16 +9,19 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
         <script src="map-reduce.js"></script>
     </head>
     <body>
-        <div id="inicial"><h1>Tortillas iniciales</h1></div>
-        <div id="doble"><h1>Doble</h1></div>
-        <div id="num_huevos"><h1>Num. huevos</h1></div>
-        <div id="solo_huevos"><h1>Solo huevos</h1></div>
-        <div id="con_sal"><h1>Con sal</h1></div>
-        <div id="con_cebolla"><h1>Con cebolla</h1></div>
-
+        <div class="contenedor">
+            <div id="link"><a href="https://github.com/vrivas/map-reduce">https://github.com/vrivas/map-reduce</a></div>
+            <div id="inicial"><h1>Tortillas iniciales</h1></div>
+            <div id="doble"><h1>Doble</h1></div>
+            <div id="num_huevos"><h1>Num. huevos</h1></div>
+            <div id="solo_huevos"><h1>Solo huevos</h1></div>
+            <div id="con_sal"><h1>Con sal</h1></div>
+            <div id="con_cebolla"><h1>Con cebolla</h1></div>
+        </div>
         <script>
             document.getElementById("inicial").innerHTML += listar(tortillas);
             duplicar(tortillas);

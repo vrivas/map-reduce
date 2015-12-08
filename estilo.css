@@ -1,0 +1,42 @@
+/* 
+    Created on : 09-dic-2015, 0:14:20
+    Author     : Victor M. Rivas Santos <vrivas@ujaen.es>
+*/
+
+body {
+    font-family: Arial,Helvetica,Lucida,sans-serif;
+    background-color: #aaa;
+}
+table {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    background-color: #fff;
+    border: 1pt solid black;
+}
+
+tr:nth-child(odd) {
+background-color: #eee;
+}
+
+tr:nth-child(even) {
+background-color: #fff;
+}
+th {
+    border: 1pt solid black;
+    background-color: #ccc;
+}
+
+td {
+    border: 1pt solid black;
+}
+.contenedor {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    background-color: #fff;
+    border: 1pt solid black;
+    text-align: center;
+}
+#link {
+    text-align: right;
+    font-size: 0.8em;
+}
