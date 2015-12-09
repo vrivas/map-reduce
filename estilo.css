@@ -5,7 +5,11 @@
 
 body {
     font-family: Arial,Helvetica,Lucida,sans-serif;
-    background-color: #aaa;
+    background-color: #aab;
+}
+
+h1 {
+    color: #446;
 }
 table {
     margin: 0 auto 0 auto;
@@ -29,8 +33,15 @@ th {
 td {
     border: 1pt solid black;
 }
-.contenedor {
-    margin: 0 auto 0 auto;
+#inicial
+, #con_cebolla
+, #con_sal
+, #doble
+,#num_huevos
+, #solo_huevos
+, #mas_ejemplos{
+    margin: 0 auto 1em auto;
+    padding: 1em;
     width: 80%;
     background-color: #fff;
     border: 1pt solid black;
@@ -39,4 +50,13 @@ td {
 #link {
     text-align: right;
     font-size: 0.8em;
+}
+
+pre {
+    text-align: left;
+    margin: 0 auto 1em auto;
+    border: 1px dashed #aaa;
+    padding: .5em;
+    width: 45%;
+    color: #444;
 }

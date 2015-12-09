@@ -15,12 +15,80 @@ and open the template in the editor.
     <body>
         <div class="contenedor">
             <div id="link"><a href="https://github.com/vrivas/map-reduce">https://github.com/vrivas/map-reduce</a></div>
-            <div id="inicial"><h1>Tortillas iniciales</h1></div>
-            <div id="doble"><h1>Doble</h1></div>
-            <div id="num_huevos"><h1>Num. huevos</h1></div>
-            <div id="solo_huevos"><h1>Solo huevos</h1></div>
-            <div id="con_sal"><h1>Con sal</h1></div>
-            <div id="con_cebolla"><h1>Con cebolla</h1></div>
+            <div id="inicial"><h1>Tortillas iniciales</h1>
+                <pre>
+function Tortilla(patatas, huevos, sal, extras) {
+    this.patatas = patatas || 0;
+    this.huevos = huevos || 0;
+    this.sal = sal || false;
+    this.extras = extras;
+}
+
+var tortillas = [
+    new Tortilla(200, 3, true)
+            , new Tortilla(450, 4, false)
+            , new Tortilla(250, 2, true, ["cebolla", "pimiento"])
+            , new Tortilla(600, 5, true, ["berenjena", "ajo"])
+            , new Tortilla(300, 2, false, ["cebolla"])
+];
+                </pre></div>
+            <div id="doble"><h1>Doble</h1>
+                <pre>
+function duplicar(v) {
+    v.forEach(function (e) {
+        e.huevos *= 2;
+        e.patatas *= 2;
+    });
+}                    
+                </pre>
+            </div>
+            <div id="num_huevos"><h1>Num. huevos</h1>
+                <pre>
+function sumar_huevos(v) {
+    return v.reduce(function (prev, e) {
+        return prev + e.huevos;
+    }, 0);
+}
+                </pre>
+            </div>
+            <div id="solo_huevos"><h1>Solo huevos</h1>
+                <pre>
+function solo_huevos(v) {
+    return v.map(function (e) {
+        return e.huevos;
+    });
+}
+
+                </pre>
+            </div>
+            <div id="con_sal"><h1>Con sal</h1>
+                <pre>
+function con_sal(v) {
+    return v.filter(function (e) {
+        return e.sal;
+    });
+}                    
+                </pre>
+            </div>
+            <div id="con_cebolla"><h1>Con cebolla</h1>
+                <pre>
+function tiene_cebolla(t) {
+    return t.extras
+            ? t.extras.reduce(function (prev, e) {
+                return prev || e === "cebolla";
+            }, false)
+            : false;
+}
+
+function con_cebolla(v) {
+    return v.filter(tiene_cebolla);
+}
+                </pre>
+            </div>
+            <div id="mas_ejemplos">
+                <h1>Algún otro ejemplo</h1>
+                <p><a href="https://github.com/vrivas/ts-error-measures/blob/master/ts-error-measures.js">https://github.com/vrivas/ts-error-measures/blob/master/ts-error-measures.js</a></p>
+            </div>
         </div>
         <script>
             document.getElementById("inicial").innerHTML += listar(tortillas);
